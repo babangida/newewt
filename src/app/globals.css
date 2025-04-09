@@ -1,5 +1,10 @@
 /* ВРЕМЕННО отключаем анимацию, чтобы не мешала сборке */
 /* @import "tw-animate-css"; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +21,7 @@
   -1px 1px 2px rgba(217, 180, 124, 1),
   1px 1px 2px rgba(217, 180, 124, 1);
 }
+
 
 @theme inline {
   --color-background: var(--background);
