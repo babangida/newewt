@@ -6,7 +6,7 @@ import axios from 'axios';
 interface ImageType {
     url: string;
 }
-
+{/* 🚀 Проверка авторазвёртывания Vercel */}
 interface Product {
     id: number;
     name: string;
