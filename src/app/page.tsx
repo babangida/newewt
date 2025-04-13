@@ -8,27 +8,28 @@ function HomePage() {
         <main>
             {/* HERO SECTION */}
             <section
-                className="py-20 text-white text-center animate-fade-in relative"
-                style={{
-                    backgroundImage: 'url(/pexels.jpg)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
+            className="py-20 text-white text-center animate-fade-in transition-all duration-700 relative"
+            style={{
+            backgroundImage: 'url(/pexels.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+        }}
             >
-                {/* Убираем полупрозрачный черный фон */}
-                <div className="absolute inset-0 z-0" style={{ backgroundColor: 'transparent' }} />
-                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-4xl font-bold text-primary mb-6  rounded-md inline-block">
-                        Добро пожаловать в ООО «ИсВесТрейд»
-                    </h1>
-                    <p className="text-xl font-bold  mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
-                        От поля до полки: экспорт сырья и дистрибуция готовой продукции
-                    </p>
-                    <p className="text-lg font-bold mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
-                        Мы поставляем сельскохозяйственное сырьё на экспорт и реализуем качественные продукты питания для торговых сетей.
-                    </p>
-                </div>
-            </section>
+            {/* ✅ Удаляем или задаём z-индекс ниже -10 */}
+            {/* <div className="absolute inset-0 -z-10" style={{ backgroundColor: 'transparent' }} /> */}
+
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 className="text-4xl font-bold text-primary mb-6 rounded-md inline-block">
+                    Добро пожаловать в ООО «ИсВесТрейд»
+                </h1>
+                <p className="text-xl font-bold mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
+                    От поля до полки: экспорт сырья и дистрибуция готовой продукции
+                </p>
+                <p className="text-lg font-bold mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
+                    Мы поставляем сельскохозяйственное сырьё на экспорт и реализуем качественные продукты питания для торговых сетей.
+                </p>
+            </div>
+        </section>
 
             {/* CARD SECTION */}
             <section className="py-1 bg-background animate-fade-in">
@@ -38,9 +39,9 @@ function HomePage() {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto ">
                         <Link href="/agriculture">
-                            <Card className="group transition duration-300 bg-white ease-in-out hover:bg-green-100 hover:shadow-xl cursor-pointer">
+                            <Card className="group transition duration-300 bg-white ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer">
                                 <CardContent className="p-6 flex flex-col items-center text-center">
-                                    <FaTractor className="text-4xl text-green-600 group-hover:text-green-800 transition duration-300 mb-4" />
+                                    <FaTractor className="text-4xl text-accent group-hover:text-lightgreen transition duration-300 mb-4" />
                                     <h3 className="text-xl font-semibold mb-2">Сельское хозяйство</h3>
                                     <p className="text-gray-600">
                                         Экспортируем чечевицу, нут, горох, фисташку и другие культуры
@@ -50,9 +51,9 @@ function HomePage() {
                         </Link>
 
                         <Link href="/distribution">
-                            <Card className="group transition duration-300 bg-white ease-in-out hover:bg-yellow-100 hover:shadow-xl cursor-pointer">
+                            <Card className="group transition duration-300 bg-white ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer">
                                 <CardContent className="p-6 flex flex-col items-center text-center">
-                                    <FaStore className="text-4xl text-yellow-600 group-hover:text-yellow-800 transition duration-300 mb-4" />
+                                    <FaStore className="text-4xl text-accent group-hover:text-lightgreen transition duration-300 mb-4" />
                                     <h3 className="text-xl font-semibold mb-2">Дистрибуция продукции</h3>
                                     <p className="text-gray-600">
                                         Поставляем готовые продукты питания и снэки в торговые сети
