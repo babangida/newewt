@@ -14,7 +14,7 @@ interface Product {
         url: string;
     };
 }
-
+console.log("Vercel auto-deploy test");
 function ProductsPage() {
     const [agricultureProducts, setAgricultureProducts] = useState<Product[]>([]);
     const [foodProducts, setFoodProducts] = useState<Product[]>([]);
