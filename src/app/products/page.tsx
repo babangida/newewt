@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface ImageType {
-    url: string;
-}
+// interface ImageType {
+//     url: string;
+// }
 {/* 🚀 Проверка авторазвёртывания Vercel */}
 interface Product {
     id: number;
