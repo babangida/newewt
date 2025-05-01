@@ -68,9 +68,7 @@ function ProductsPage() {
                                                 <p className="font-semibold">{product.name}</p>
                                                 {/* Отображаем изображение */}
                                                 <img
-                                                    src={`http://localhost:1337${product.image.url}`}
-                                                    alt={product.name}
-                                                    className="w-64 h-64 object-cover rounded-md mb-2 mx-auto"
+                                                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${product.image.url}`}
                                                 />
                                             </div>
                                         ) : (
@@ -98,9 +96,7 @@ function ProductsPage() {
                                                 <p className="font-semibold">{product.name}</p>
                                                 {/* Отображаем изображение */}
                                                 <img
-                                                    src={`http://localhost:1337${product.image.url}`}
-                                                    alt={product.name}
-                                                    className="w-64 h-64 object-cover rounded-md mb-2 mx-auto"
+                                                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${product.image.url}`}
                                                 />
                                             </div>
                                         ) : (
