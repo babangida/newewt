@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { Send, MessageCircle } from 'lucide-react'; // иконки Telegram и WhatsApp
 
 function Footer() {
     const currentYear = new Date().getFullYear();
@@ -19,10 +22,14 @@ function Footer() {
                     <p>Телефон: <a href="tel:+79991234567" className="underline hover:text-gray-300">+7 999 123-45-67</a></p>
                 </div>
 
-                {/* Соцсети */}
+                {/* Иконки соцсетей */}
                 <div className="flex space-x-3">
-                    <a href="#" className="bg-white text-primary px-4 py-1 rounded-md hover:bg-gray-100 transition">Telegram</a>
-                    <a href="#" className="bg-white text-primary px-4 py-1 rounded-md hover:bg-gray-100 transition">WhatsApp</a>
+                    <a href="#" className="bg-white text-primary p-2 rounded-full hover:bg-gray-100 transition" aria-label="Telegram">
+                        <Send className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="bg-white text-primary p-2 rounded-full hover:bg-gray-100 transition" aria-label="WhatsApp">
+                        <MessageCircle className="w-5 h-5" />
+                    </a>
                 </div>
 
             </div>
