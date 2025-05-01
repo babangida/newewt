@@ -10,22 +10,25 @@ function HomePage() {
         <main>
             {/* HERO SECTION */}
             <section
-                className="py-20 text-white text-center animate-fade-in transition-all duration-700 relative"
+                className="relative min-h-screen flex items-start justify-center pt-24 text-center transition-all duration-700 animate-fade-in"
                 style={{
                     backgroundImage: 'url(/pexels.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-4xl font-bold text-primary mb-6 rounded-md inline-block">
+                {/* Светлый оверлей */}
+                <div className="absolute inset-0 bg-white bg-opacity-30 z-0" />
+
+                <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6 max-w-7xl">
+                    <h1 className="text-5xl md:text-6xl font-bold text-primary text-center">
                         Добро пожаловать в ООО «ИсВесТрейд»
                     </h1>
-                    <p className="text-xl font-bold mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
+                    <p className="text-2xl md:text-3xl font-semibold text-primary text-center">
                         От поля до полки: экспорт сырья и дистрибуция готовой продукции
                     </p>
-                    <p className="text-lg font-bold mb-4 text-primary bg-lightgreen/50 p-0 rounded-md inline-block">
-                        Мы поставляем313131 сельскохозяйственное сырьё на экспорт и реализуем качественные продукты питания для торговых сетей.
+                    <p className="text-xl md:text-2xl font-medium text-primary text-center">
+                        Мы поставляем сельскохозяйственное сырьё на экспорт и реализуем качественные продукты питания для торговых сетей.
                     </p>
                 </div>
             </section>
