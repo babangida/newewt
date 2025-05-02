@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const inter = Inter({ subsets: ["latin"] });
+// Подключаем оба шрифта с переменными
+const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
+const playfair = Playfair_Display({
+    subsets: ["latin", "cyrillic"],
+    weight: ["400", "500", "700"],
+    variable: "--font-playfair",
+    display: "swap",
+});
 
 export const metadata: Metadata = {
     title: "ИсВесТрейд / Easwestrade LLC",
@@ -14,7 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ru">
-        <body className={`${inter.className} bg-background text-primary font-sans`}>
+        <body
+            className={`${inter.variable} ${playfair.variable} bg-background text-primary font-sans`}
+        >
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

@@ -20,8 +20,8 @@ function HomePage() {
                 {/* Светлый радиальный градиент по центру */}
                 <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.5)_0%,_transparent_100%)]" />
 
-                <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6 max-w-6xl">
-                    <span className="backdrop-blur-lg bg-white/20 border border-white/40 px-4 py-3 rounded-lg shadow-md text-5xl md:text-6xl font-bold text-primary text-center drop-shadow-lg">
+                <div className=" relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6 max-w-6xl">
+                    <span className=" px-4 py-3 rounded-lg text-5xl md:text-6xl font-bold text-primary text-center drop-shadow-lg">
                         ООО «ИсВесТрейд»
                     </span>
                     <h1 className="border-b-4 border-accent inline-block pb-2 text-5xl md:text-6xl font-bold text-primary text-center drop-shadow-lg">
