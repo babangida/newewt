@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
 const playfair = Playfair_Display({
     subsets: ["latin", "cyrillic"],
-    weight: ["400", "500", "700"],
+    weight: ["400", "500", "600", "700", "900"],
     variable: "--font-playfair",
     display: "swap",
 });

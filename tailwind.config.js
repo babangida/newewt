@@ -17,18 +17,19 @@ module.exports = {
         },
       },
       colors: {
-        primary: '#2E4A3D',     // Тёмно-зелёный
-        background: '#F9F5EF',  // Песочный фон
-        olive: '#A3B49C',       // Мягкий оливковый
-        accent: '#D9B47C',      // Золотистый акцент
-        lightgreen: '#C9D6C1',  // Светлый зелёный
+        primary: '#2E4A3D',
+        background: '#F9F5EF',
+        olive: '#A3B49C',
+        accent: '#D9B47C',
+        lightgreen: '#C9D6C1',
         border: '#D1D5DB',
-        text: '#2E4A3D',        // Цвет текста (под основной)
+        text: '#2E4A3D',
       },
       fontFamily: {
         sans: ['"Segoe UI"', 'Roboto', 'sans-serif'],
+        playfair: ['var(--font-playfair)'], // ✅ добавили Playfair
       },
     },
   },
   plugins: [],
-}
+};

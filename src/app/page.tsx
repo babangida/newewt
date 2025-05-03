@@ -20,16 +20,19 @@ function HomePage() {
                 {/* Светлый радиальный градиент по центру */}
                 <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.5)_0%,_transparent_100%)]" />
 
-                <div className=" relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6 max-w-6xl">
-                    <span className=" px-4 py-3 rounded-lg text-5xl md:text-6xl font-bold text-primary text-center drop-shadow-lg">
-                        ООО «ИсВесТрейд»
-                    </span>
-                    <h1 className="border-b-4 border-accent inline-block pb-2 text-5xl md:text-6xl font-bold text-primary text-center drop-shadow-lg">
+                <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-6 max-w-6xl">
+  <span className="font-playfair px-4 py-3 rounded-lg text-5xl md:text-6xl font-bold text-black text-center drop-shadow-lg">
+    ООО «ИсВесТрейд»
+  </span>
+
+                    <h1 className="font-playfair  border-b-4 border-accent inline-block pb-2 text-5xl md:text-6xl font-bold text-black text-center drop-shadow-lg">
                         От поля до полки: экспорт сырья и дистрибуция готовой продукции
                     </h1>
-                    <p className="text-4xl md:text-4xl font-medium text-primary text-center drop-shadow-lg">
+
+                    <p className="font-playfair text-4xl md:text-4xl font-medium text-black text-center drop-shadow-lg">
                         Мы поставляем сельскохозяйственное сырьё на экспорт и реализуем качественные продукты питания для торговых сетей.
                     </p>
+
                     <span className="text-primary text-2xl animate-bounce mt-4 drop-shadow-lg">⬇</span>
                 </div>
             </section>
