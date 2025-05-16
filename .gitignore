@@ -41,3 +41,12 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+# Strapi специфические файлы
+/.strapi
+/.strapi-updater.json
+/.strapi-cloud.json
+/build
+/dist
+/public/uploads/*
+!public/uploads/.gitkeep
+/exports
