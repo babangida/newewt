@@ -9,8 +9,11 @@ import { PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {
   return (
-    <header className="bg-primary text-white py-4 shadow-md">
-      <div className="max-w-[1300px] w-full px-4 mx-auto">
+    <header
+      className="fixed top-0 left-0 w-full z-50 bg-primary text-white shadow-md "
+      style={{ height: "var(--header-h)" }}
+    >
+      <div className="max-w-[1300px] mx-auto h-full px-4 flex items-center">
         {/* 5 колонок: пустая | левое меню | логотип | правое меню | телефон */}
         <nav className="grid grid-cols-[1fr_auto_auto_auto_1fr] items-center w-full gap-x-12">
           {/* 1. Пустая зона слева (баланс для телефона) */}

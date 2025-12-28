@@ -1,9 +1,9 @@
 /* ВРЕМЕННО отключаем анимацию, чтобы не мешала сборке */
 /* @import "tw-animate-css"; */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600&display=swap");
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @tailwind base;
@@ -12,16 +12,20 @@ body {
 
 @custom-variant dark (&:is(.dark *));
 .text-shadow-lg {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7), 1px -1px 2px rgba(0, 0, 0, 0.7), -1px 1px 2px rgba(0, 0, 0, 0.7), 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(0, 0, 0, 0.7),
+    1px -1px 2px rgba(0, 0, 0, 0.7), -1px 1px 2px rgba(0, 0, 0, 0.7),
+    1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 .text-shadow-gold {
   text-shadow: 1px 1px 2px rgba(217, 180, 124, 1),
-  -1px -1px 2px rgba(217, 180, 124, 1),
-  1px -1px 2px rgba(217, 180, 124, 1),
-  -1px 1px 2px rgba(217, 180, 124, 1),
-  1px 1px 2px rgba(217, 180, 124, 1);
+    -1px -1px 2px rgba(217, 180, 124, 1), 1px -1px 2px rgba(217, 180, 124, 1),
+    -1px 1px 2px rgba(217, 180, 124, 1), 1px 1px 2px rgba(217, 180, 124, 1);
 }
 
+:root {
+  --header-h: 64px;
+  --footer-h: 64px;
+}
 
 @theme inline {
   --color-background: var(--background);
