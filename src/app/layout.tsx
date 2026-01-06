@@ -28,8 +28,8 @@ export default function RootLayout({
         <main
           className="overflow-y-auto scroll-smooth snap-y snap-mandatory"
           style={{
-            height: "calc(100vh - var(--header-h))",
-            marginTop: "var(--header-h)",
+            height: "calc(100vh - 64px)",
+            marginTop: "64px",
           }}
         >
           {children}

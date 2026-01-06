@@ -39,35 +39,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SCREEN 2 (контент + footer внизу) */}
+      {/* SCREEN 2 (всё в один экран + footer 64px) */}
       <section
         className="snap-start bg-background flex flex-col"
         style={{ height: "calc(100vh - var(--header-h))" }}
       >
-        <div className="flex-1 flex items-start justify-start text-center md:pt-4">
+        {/* CONTENT (высота = экран - футер) */}
+        <div
+          className="flex-1 flex items-start pt-4"
+          style={{ minHeight: "calc(100% - var(--footer-h))" }}
+        >
           <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-3">
+            {/* Header block (компактно) */}
+            <div className="text-center">
+              <h2 className="text-xl md:text-2xl font-semibold text-primary">
                 Направления компании
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+
+              <p className="mt-2 text-sm md:text-base text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 ООО «ИсВесТрейд» — экспортно-торговая компания. Мы организуем
                 поставки сельскохозяйственного сырья и дистрибуцию продуктов
                 питания, обеспечивая прозрачные условия, контроль качества и
                 устойчивую логистику.
               </p>
-              <div className="mt-6 h-[2px] w-full bg-accent/60" />
+
+              <div className="mt-3 h-[2px] w-full max-w-5xl mx-auto bg-accent/50" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* 2 cards (ниже и компактнее) */}
+            <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
               <Link href="/agriculture">
-                <Card className="group transition duration-300 bg-white ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                  <CardContent className="p-8 flex flex-col items-center text-center">
-                    <FaTractor className="text-4xl text-accent group-hover:text-lightgreen transition duration-300 mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">
+                <Card className="group bg-white transition duration-300 transform hover:scale-[1.01] hover:shadow-lg cursor-pointer rounded-2xl">
+                  <CardContent className="p-5 flex flex-col items-center text-center">
+                    <FaTractor className="text-3xl text-accent group-hover:text-lightgreen transition duration-300 mb-2" />
+                    <h3 className="text-lg font-semibold mb-1">
                       Сельское хозяйство
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-sm text-gray-600">
                       Экспортируем чечевицу, нут, горох, фисташку и другие
                       культуры
                     </p>
@@ -76,13 +84,13 @@ export default function HomePage() {
               </Link>
 
               <Link href="/distribution">
-                <Card className="group transition duration-300 bg-white ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                  <CardContent className="p-8 flex flex-col items-center text-center">
-                    <FaStore className="text-4xl text-accent group-hover:text-lightgreen transition duration-300 mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">
+                <Card className="group bg-white transition duration-300 transform hover:scale-[1.01] hover:shadow-lg cursor-pointer rounded-2xl">
+                  <CardContent className="p-5 flex flex-col items-center text-center">
+                    <FaStore className="text-3xl text-accent group-hover:text-lightgreen transition duration-300 mb-2" />
+                    <h3 className="text-lg font-semibold mb-1">
                       Дистрибуция продукции
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-sm text-gray-600">
                       Поставляем готовые продукты питания и снэки в торговые
                       сети
                     </p>
@@ -90,47 +98,55 @@ export default function HomePage() {
                 </Card>
               </Link>
             </div>
-            <div className="mt-12">
-              <h3 className="text-xl md:text-2xl font-semibold text-primary text-center mb-6">
+
+            {/* Why us (не большие карточки, а компактные фичи) */}
+            <div className="mt-5 max-w-5xl mx-auto">
+              <h3 className="text-lg md:text-xl font-semibold text-primary text-center">
                 Почему с нами работают
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card className="bg-white">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-accent font-semibold mb-2">
+              <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div className="bg-white rounded-2xl border shadow-sm p-4 flex gap-3 items-start">
+                  <div className="h-9 w-9 rounded-xl bg-accent/15 flex items-center justify-center text-accent text-lg shrink-0">
+                    ✓
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm font-semibold text-primary">
                       Контроль качества
                     </div>
-                    <p className="text-gray-600">
-                      Проверка партий и документации, требования к упаковке и
-                      маркировке.
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      Проверка партий, документы, упаковка и маркировка.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="bg-white">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-accent font-semibold mb-2">
+                <div className="bg-white rounded-2xl border shadow-sm p-4 flex gap-3 items-start">
+                  <div className="h-9 w-9 rounded-xl bg-accent/15 flex items-center justify-center text-accent text-lg shrink-0">
+                    ✓
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm font-semibold text-primary">
                       Прозрачные условия
                     </div>
-                    <p className="text-gray-600">
-                      Работа по договору, согласованные сроки, понятная
-                      коммуникация.
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      Договор, сроки, понятная коммуникация.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="bg-white">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-accent font-semibold mb-2">
+                <div className="bg-white rounded-2xl border shadow-sm p-4 flex gap-3 items-start">
+                  <div className="h-9 w-9 rounded-xl bg-accent/15 flex items-center justify-center text-accent text-lg shrink-0">
+                    ✓
+                  </div>
+                  <div className="text-left">
+                    <div className="text-sm font-semibold text-primary">
                       Логистика под задачу
                     </div>
-                    <p className="text-gray-600">
-                      Подбор маршрута и формата поставки, стабильность и
-                      прогнозируемость.
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      Маршрут/формат поставки, стабильность.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
